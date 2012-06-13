@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<script src="../jquery.assistedsort.js"></script>
+
+		<style>
+			input{width:60px;}
+			th{text-align:left;}
+			tr.even{background-color:#efefef;}
+			tr.highlighted{background-color:#fffbcf;}
+		</style>
+
+		<script>
+			$(document).ready(function(){
+				$("#my_table").assistedSort();
+
+				// example methods to call on the rows:
+				// $("#item_2").assistedSort("moveToIndex", 5);
+				// $("#item_2").assistedSort("moveUp");
+				// $("#item_2").assistedSort("moveDown");
+			});
+		</script>
+	</head>
+
+	<body>
+		<form name="my_form" id="my_form">
+			<table id="my_table">
+				<thead>
+					<tr>
+						<th>Order</th>
+						<th>Name</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="text" name="sort_order" id="sort_order_1" value="1" /></td>
+						<td>Item 1</td>
+					</tr>
+					<tr id="item_2">
+						<td><input type="text" name="sort_order" id="sort_order_2" value="2" /></td>
+						<td>Item 2</td>
+					</tr>
+					<tr>
+						<td><input type="text" name="sort_order" id="sort_order_3" value="3" /></td>
+						<td>Item 3</td>
+					</tr>
+					<tr>
+						<td><input type="text" name="sort_order" id="sort_order_4" value="4" /></td>
+						<td>Item 4</td>
+					</tr>
+					<tr>
+						<td><input type="text" name="sort_order" id="sort_order_5" value="5" /></td>
+						<td>Item 5</td>
+					</tr>
+					<tr>
+						<td><input type="text" name="sort_order" id="sort_order_6" value="6" /></td>
+						<td>Item 6</td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</body>
+</html>
