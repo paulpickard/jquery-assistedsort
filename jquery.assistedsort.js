@@ -233,7 +233,7 @@
 		var index = input.data("assistedsort-index");
 
 		if(index != 1){
-			
+
 			// get the previous row and input
 			var prev = row.prev(opts.rowSelector);
 			var prev_input = prev.find(opts.inputSelector);
@@ -317,14 +317,14 @@
 
 		table.find(opts.inputSelector).each(function(i){
 
-			var $this = $(this);
+			var input = $(this);
 
 			// value and index
-			$this.val(i + 1);
-			$this.data("assistedsort-index", i + 1);
+			input.val(i + 1);
+			input.data("assistedsort-index", i + 1);
 
 			// odd-even row colors
-			zebraStripe($this, i + 1, opts);
+			zebraStripe(input, i + 1, opts);
 
 		});
 
